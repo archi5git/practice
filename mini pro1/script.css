@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,
+body{
+    height: 100%;
+    width:100%;
+
+}
+body{
+    background-color:rgb(115, 199, 171);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#card{
+    background-color: #3468a3;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+h5{
+    color:red;
+    margin-top: 5px;
+}
+button{
+    padding: 5px 15px;
+    margin-top: 5px;
+}
