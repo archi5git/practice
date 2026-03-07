@@ -7,7 +7,8 @@ bt.addEventListener('click',function(){
     h5.style.color="green"
     bt.innerHTML="Remove Friend"
     flag=1
-}else{
+}
+else{
      h5.innerHTML="Stranger"
     h5.style.color="red"
     bt.innerHTML="Add Friend"
