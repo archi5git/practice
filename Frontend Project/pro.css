@@ -1,0 +1,50 @@
+:root{
+    --pri:#0d1b29;
+    --sec:#547792;
+    --tri:#94B4C1;
+    --sq:#EAE0CF;
+
+}
+    @font-face {
+    font-family: light;
+    src: url(./AeonikTRIAL-Light.otf);
+}
+@font-face {
+    font-family: bold;
+    src: url(./AeonikTRIAL-Bold.otf);
+}
+@font-face {
+    font-family: normal;
+    src: url(./AeonikTRIAL-Regular.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width:100%;
+    background-color: var(--pri);
+}
+nav{
+    position: fixed;
+    background-color: #94B4C1;
+    width: 100%;
+    height: 60px;
+}
+section .allElems{
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    padding-top: 80px;
+    font-family: bold;
+    color:var(--sq);
+
+}
