@@ -3,10 +3,8 @@
 function fetchUserProfile(username){
     return fetch(`https://api.github.com/users/${username}`).then (raw=>{
         if(!raw.ok)throw new Error("User Not Found");
-    return raw.json();
-});
-        
-
+        return raw.json();
+})
     }
 
 fetchUserProfile("async").then(function(data){
@@ -14,11 +12,14 @@ fetchUserProfile("async").then(function(data){
     
 })
 function getUserRepos(username){
-    return fetch(`https://api.github.com/users/${username}/repos`).then ((raw)=>
-    raw.json());
+    return fetch(`https://api.github.com/users/${username}/repos?sort=updated`).then ((raw)=>{
+        if(!raw.ok)throw new Error("Failed to fetch repos...");
+    raw.json()
+});
 
 }
-getUserRepos("asynchronousJavascriptor").then(function(data){
+getUserRepos("async").then(function(data){
     console.log(data);
     
 })
+document.querySelector
