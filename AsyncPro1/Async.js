@@ -22,4 +22,7 @@ getUserRepos("async").then(function(data){
     console.log(data);
     
 })
-document.querySelector
+document.querySelector(".search").addEventListener("click", function(){
+alert();
+
+});
