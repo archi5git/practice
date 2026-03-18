@@ -186,23 +186,51 @@ width: 65%;
     overflow: auto;
 }
 
-.task{
+.task {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
-    background-color:var(--tri);
+    background-color: var(--tri);
     padding: 20px 30px;
-    border-radius: 20px;
-    margin-top: 2px;
-    overflow: auto;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
 
-}
-.task h5{
-    color: #13263a;
+.task h5 {
+    color: var(--pri);
     font-size: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 5px;
 }
+
+.task h5 span {
+    background-color: darkblue;
+    color: var(--sq);
+    padding: 4px 8px;
+    border-radius: 50px;
+    font-size: 11px;
+}
+
+.task h5 span.true {
+    opacity: 1;
+}
+
+.task h5 span.false {
+    opacity: 0;
+}
+
 .task button{
     padding: 15px 30px;
         background-color:rgb(103, 146, 226);
@@ -212,6 +240,27 @@ width: 65%;
         border-radius: 5px;
         border: none;
         font-weight: 600;
+        align-items: last baseline;
+        gap: 100%;
+        margin-left: auto;
+
+}
+.mark-imp{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color:var(--sec);
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 30px;
+}
+.mark-imp #input-12{
+    width: 30%;
+    scale: 2;
+}
+.mark-imp label{
+    font-size: 20px;
 
 }
 
