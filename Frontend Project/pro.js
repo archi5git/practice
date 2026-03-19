@@ -16,10 +16,7 @@ var allElems = document.querySelectorAll('.elem')
 }
 
 openFeatures()
-var form= document.querySelector('.addTask form')
-let taskInput=document.querySelector('addTask form input')
-let taskDetailsInput=document.querySelector('.addTask form textarea')
-let taskCheckbox=document.querySelector('.addTask form #check')
+
 let currentTask=[{
     task:"Mandir jao",
     details:"Shiv ji wale",
@@ -48,9 +45,42 @@ var allTask = document.querySelector('.allTask')
         })
 
         allTask.innerHTML = sum;
+        localStorage.setItem('currentTask', JSON.stringify(currentTask))
+
+        document.querySelectorAll('.task button').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                currentTask.splice(btn.id, 1)
+                renderTask()
+            })
+        })
     }
     renderTask()
 
     form.addEventListener('submit',function(e){
     e.preventDefault()
 })
+let form = document.querySelector('.addTask form')
+    let taskInput = document.querySelector('.addTask form #task-input')
+    let taskDetailsInput = document.querySelector('.addTask form textarea')
+    let taskCheckbox = document.querySelector('.addTask form #check')
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault()
+        currentTask.push(
+            {
+                task: taskInput.value,
+                details: taskDetailsInput.value,
+                imp: taskCheckbox.checked
+            }
+        )
+        renderTask()
+
+        taskCheckbox.checked = false
+        taskInput.value = ''
+        taskDetailsInput.value = ''
+    })
+
+
+
+todoList()
+
