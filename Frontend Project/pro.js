@@ -17,62 +17,55 @@ var allElems = document.querySelectorAll('.elem')
 
 openFeatures()
 
-let currentTask=[{
-    task:"Mandir jao",
-    details:"Shiv ji wale",
-    imp:true
-},{
-    task:"Project kro",
-    details:"Web Dev ke",
-    imp:true
-},
-{
-    task:"Assignments kro",
-    details:"OR ka",
-    imp:false
+let currentTask=[]
+if(localStorage.getItem('currentTask')){
+    currentTask=JSON.parse(localStorage.getItem("currentTask"))
 }
-]
+else{
+    console.log("Task list is Empty");
+    
+}
+
 function renderTask(){
 var allTask = document.querySelector('.allTask')
 
-        var sum = ''
+        var sum = '';
 
         currentTask.forEach(function (elem, idx) {
             sum = sum + `<div class="task">
         <h5>${elem.task} <span class=${elem.imp}>imp</span></h5>
+        <p>${elem.details}</p>
         <button id=${idx}>Mark as Completed</button>
         </div>`
         })
 
         allTask.innerHTML = sum;
-        localStorage.setItem('currentTask', JSON.stringify(currentTask))
+        localStorage.setItem('currentTask', JSON.stringify(currentTask));
 
-        document.querySelectorAll('.task button').forEach(function (btn) {
+        document.querySelectorAll('.alltask button').forEach(function (btn) {
             btn.addEventListener('click', function () {
                 currentTask.splice(btn.id, 1)
                 renderTask()
             })
         })
     }
-    renderTask()
-
-    form.addEventListener('submit',function(e){
-    e.preventDefault()
-})
+    renderTask();
 let form = document.querySelector('.addTask form')
-    let taskInput = document.querySelector('.addTask form #task-input')
-    let taskDetailsInput = document.querySelector('.addTask form textarea')
-    let taskCheckbox = document.querySelector('.addTask form #check')
-
     form.addEventListener('submit', function (e) {
-        e.preventDefault()
-        currentTask.push(
+                e.preventDefault()
+
+
+
+    let taskInput = document.querySelector('#input-12')
+    let taskDetailsInput = document.querySelector('.addTask textarea')
+    let taskCheckbox = document.querySelector('#check')
+    let newTask=
             {
                 task: taskInput.value,
                 details: taskDetailsInput.value,
                 imp: taskCheckbox.checked
             }
-        )
+            currentTask.push(newTask)
         renderTask()
 
         taskCheckbox.checked = false
@@ -80,7 +73,4 @@ let form = document.querySelector('.addTask form')
         taskDetailsInput.value = ''
     })
 
-
-
-todoList()
 
