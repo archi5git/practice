@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productivity Manager</title>
+    <link rel="shortcut icon" href="./fav/android-chrome-512x512.png" type="image/x-icon">
     <link
   href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
   rel="stylesheet"
@@ -13,7 +14,7 @@
 <body>
     <div id="main">
       
-        <section class="allElems">
+        <div class="allFeatures">
             <div class="todo elem "id="0">
                 <img src="https://images.unsplash.com/photo-1652809096869-55b40bd14ac1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fDNkJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww">
                <h2> To Do List</h2>
@@ -30,43 +31,42 @@
                 <img src="https://images.unsplash.com/photo-1601315488950-3b5047998b38?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8M2QlMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D">
                 <h2>Pomodromo Timer</h2>
             </div>
-            <div class="Goals elem" id="4">
+            <div class="goals elem" id="4">
                 <img src="https://images.unsplash.com/photo-1673951284213-2a3550681b7d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fDNkfGVufDB8fDB8fHww">
                 <h2>Daily Goals</h2>
-            </div>
-        </section>
-        <section class="fullelem todo-list-fullpage">
+            </div></div>
+        <section class="fullElem todo-list-fullpage">
         <button class="back" id="0"><i class="ri-close-fill"></i></button>
             <h2>Welcome! to your Personalised To do List</h2>
             <div class="todo-container">
                 <div class="addTask">
                     <form>
-                        <input  type="text" placeholder="Enter Today's Task">
-                        <textarea placeholder="Enter Details" name=""id
+                        <input id="task-input"  type="text" placeholder="Enter Today's Task">
+                        <textarea placeholder="Enter Details" name="" id=""
  cols="30" rows="10"></textarea>        
  <div class="mark-imp">
-    <input id="input-12"  type="checkbox" name="checkbox" id="check">
+    <input   type="checkbox" name="" id="check">
     <label for="check">Mark as Important</label>
  </div>
-<button>Add Task</button>        </div>
+<button>Add Task</button></form>        </div>
                 <div class="allTask">
 
                 </div>
             </div>
         </section>
-        <section class="fullelem daily-planner-fullpage" >
+        <section class="fullElem daily-planner-fullpage" >
             <button class="back"id="1"><i class="ri-close-fill"></i></button>
             <h1>Daily Planner</h1>
         </section>
-        <section class="fullelem motivational-fullpage">
+        <section class="fullElem motivational-fullpage">
             <button class="back"id="2"><i class="ri-close-fill"></i></button>
             <h1>Motivational Quotes</h1>
         </section>
-        <section class="fullelem pomodromo-fullpage">
+        <section class="fullElem pomodromo-fullpage">
             <button class="back"id="3"><i class="ri-close-fill"></i></button>
             <h1>Pomodramo Timer</h1>
         </section>
-        <section class="fullelem daily-goals-fullpage">
+        <section class="fullElem daily-goals-fullpage">
             <button class="back"id="4"><i class="ri-close-fill"></i></button>
             <h1>Daily Goals</h1>
         </section>
