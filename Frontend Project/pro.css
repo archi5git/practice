@@ -3,6 +3,14 @@
     --sec:#547792;
     --tri:#94B4C1;
     --sq:#EAE0CF;
+    --pri2: #F8F4E1;
+    --sec2: #381c0a;
+    --tri1: #FEBA17;
+    --tri2: #74512D;
+    --red: red;
+    --green: rgb(9, 138, 89);
+    --blue: rgb(0, 191, 255);
+    --black: black;
 
 }
     @font-face {
@@ -300,4 +308,60 @@ width: 65%;
     font-size: 20px;
 
 }
+.daily-planner-fullpage h2 {
+    font-size: 70px;
+}
+
+.daily-planner-fullpage .day-planner {
+    background-color: var(--tri);
+    height: 85%;
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    overflow: auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.daily-planner-fullpage .day-planner .day-planner-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+.day-planner .day-planner-time p {
+    position: absolute;
+    top: 12%;
+    left: 2%;
+    color: var(--pri2);
+    font-size: 16px;
+}
+
+.day-planner .day-planner-time input {
+    padding: 20px 45px;
+    width: 100%;
+    background-color: var(--pri);
+    border-radius: 5px;
+    border: none;
+    font-size: 35px;
+    padding-top: 34px;
+    outline: none;
+}
+
 
