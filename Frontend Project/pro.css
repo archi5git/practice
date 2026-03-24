@@ -363,5 +363,122 @@ width: 65%;
     padding-top: 34px;
     outline: none;
 }
+.motivation-fullPage-container {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.motivational-fullpage .motivation-container {
+    height: 600px;
+    width: 80%;
+    border-radius: 50px;
+    position: relative;
+}
+
+.motivational-fullpage .motivation-container::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--tri);
+    border-radius: 50px;
+    scale: 1.15;
+    -webkit-filter: blur(100px);
+    filter: blur(100px);
+    z-index: 8;
+}
+
+.motivational-fullpage .motivation-container .motivation-wrapper {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    background-color: var(--sec);
+    padding: 20px;
+    border-radius: 30px;
+    border: 6px solid var(--pri2);
+
+}
+
+.motivation-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.motivation-1 h2 {
+
+    background-color: var(--sq);
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 500;
+    text-align: right;
+    color: #0d1b29;
+}
+
+.motivation-2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+
+}
+
+.motivation-2 h1 {
+    font-size: 65px;
+    font-weight: 700;
+    color: var(--pri);
+
+}
+
+.motivation-3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.motivation-3 h2 {
+    background-color:var(--sq);
+    color: var(--pri);
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 500;
+    text-align: right;
+}
+
+.motivational-fullpage .motivation-container .motivation-wrapper img {
+    position: absolute;
+    right: 5%;
+    opacity: 0.2;
+    top: 5%;
+    height: 120px;
+}
 
 
